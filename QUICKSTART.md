@@ -11,12 +11,30 @@ Kavi has been built with a robust **Core Architecture** featuring:
 
 ## 📲 Installation Steps
 
-### 1. Build & Install
-1. **Open Android Studio**.
-2. **Connect your phone** via USB (Ensure USB Debugging is ON).
-3. Click the green **Run** button (▶).
-4. Select your device.
-5. Wait for the app to install and launch.
+### Step 4: Build & Install
+**Option A: Direct Install (Recommended)**
+1. Click the green **Run** button (▶) in Android Studio
+2. Select your connected device
+3. Wait for the app to install and launch
+
+**Option B: Build APK for Sideloading**
+1. Click **Build → Build Bundle(s) / APK(s) → Build APK(s)**
+2. Wait for build completion
+3. APK location: `app/build/outputs/apk/debug/app-debug.apk`
+4. Transfer APK to phone (USB/cloud/email)
+5. On phone: Settings → Security → Install unknown apps → Enable
+6. Open APK file and install
+
+**Option C: Cloud Build (No PC Required)**
+If you cannot run Android Studio on your PC:
+1. Create a GitHub repository named `kavi-mobile`
+2. **IMPORTANT**: Upload ALL files from INSIDE your project folder to the repository root.
+   - Do NOT upload the `kavi-mobile` folder itself.
+   - You should see `gradlew`, `app`, and `.github` in the main list.
+3. Go to **Actions** tab on GitHub
+4. Select **Build Kavi APK** workflow
+5. Wait for build to finish (~3 mins) and download `kavi-mobile-debug` artifact
+6. Install on your phone
 
 ### 2. Grant Core Permissions
 When Kavi first launches, it will ask for standard permissions. **Allow All**:

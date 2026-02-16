@@ -17,17 +17,14 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: gradle
 
-    - name: Nuclear Option - Regenerate Gradle Wrapper
-      # The user's gradlew is broken. We delete it and make a fresh one using system gradle.
-      run: |
-        rm -f gradlew
-        gradle wrapper --gradle-version 8.2
-        ./gradlew --version
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-version: '8.5'
 
-    - name: Build with Fresh Wrapper
-      run: ./gradlew assembleDebug --no-daemon --stacktrace
+    - name: Build with Gradle
+      run: gradle assembleDebug --no-daemon --stacktrace
 
     - name: Upload APK
       uses: actions/upload-artifact@v4

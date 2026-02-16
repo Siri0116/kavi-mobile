@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- The Glowing/Pulsing Orb -->
+    <ImageView
+        android:id="@+id/orbImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_orb"
+        android:contentDescription="Kavi Assistant"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_kavi_logo"
+        android:padding="12dp"
+        android:elevation="10dp" />
+
+</FrameLayout>

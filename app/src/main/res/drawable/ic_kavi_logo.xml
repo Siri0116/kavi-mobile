@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Outer circle -->
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M100,100m-90,0a90,90 0,1,1 180,0a90,90 0,1,1 -180,0" />
+    
+    <!-- Inner circle -->
+    <path
+        android:fillColor="@color/background"
+        android:pathData="M100,100m-70,0a70,70 0,1,1 140,0a70,70 0,1,1 -140,0" />
+    
+    <!-- Microphone icon -->
+    <path
+        android:fillColor="@color/accent"
+        android:pathData="M100,70c-8.284,0 -15,6.716 -15,15v20c0,8.284 6.716,15 15,15s15,-6.716 15,-15V85C115,76.716 108.284,70 100,70z" />
+    
+    <path
+        android:fillColor="@color/accent"
+        android:pathData="M80,105c0,11.046 8.954,20 20,20s20,-8.954 20,-20h5c0,13.255 -10.745,24 -24,24v10h-2v-10c-13.255,0 -24,-10.745 -24,-24H80z" />
+    
+    <!-- K letter -->
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M90,140h4v20h-4V140z M94,145l10,7.5l-10,7.5l2,3l12,-9l-12,-9L94,145z" />
+</vector>

@@ -19,13 +19,14 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: Fix gradlew line endings and permissions
-      # Fixes Windows (CRLF) vs Linux (LF) format issues
+    - name: Nuclear Option - Regenerate Gradle Wrapper
+      # The user's gradlew is broken. We delete it and make a fresh one using system gradle.
       run: |
-        sed -i 's/\r$//' gradlew
-        chmod +x gradlew
+        rm -f gradlew
+        gradle wrapper --gradle-version 8.2
+        ./gradlew --version
 
-    - name: Build with Gradle Wrapper
+    - name: Build with Fresh Wrapper
       run: ./gradlew assembleDebug --no-daemon --stacktrace
 
     - name: Upload APK
